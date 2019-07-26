@@ -1,0 +1,43 @@
+#welcomemsg{
+    top:-3em;
+}
+#aboutme{
+    right:2em;
+}
+footer{
+    height:30%;
+}
+#secondpic{
+    height:70%;
+}
+body {
+    position: relative;
+    background-image: url("https://proxy.duckduckgo.com/iu/?u=http%3A%2F%2Foathorpacademy.org%2Fwp-content%2Fuploads%2F2016%2F10%2FSign-up-Here.png&f=1");
+    background-repeat: repeat-y;
+}
+
+form {
+    position: relative;
+    text-align: center;
+    width: 50%;
+    background-image: url("https://www.formica.com/~/media/emea/images/decors/eu/cc0949.jpg" center);
+    /*Background "sign up" picture*/
+    border: groove silver;
+}
+
+
+/*Using span element for inline edit*/
+
+span {
+    font-family: "Comic Sans";
+    /*Specifying Comic Sans as the browser font*/
+    color: red;
+}
+
+header div form {
+    position: relative;
+    background-color: lightgrey;
+    border: none lightgrey;
+    text-align: none;
+    width: 100%;
+}

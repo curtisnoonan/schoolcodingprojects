@@ -1,0 +1,156 @@
+/* Written By: Curtis Noonan; March 21, 2019
+    Web Eng Comp 484 Spring 2019
+    HTML-CSS Project 1
+    Page 2 CSS: Privacy Agreement */
+
+
+/* screen width is less than or equal to 480px
+        /* 2 columns
+        /* column gaps 20px, background silver */
+
+@media screen and (max-width: 480px),
+screen and (max-device-width: 480px),
+handheld and (max-width: 400px) {
+    .privacyArt {
+        --webkit-column-count: 2;
+        --moz-column-count: 2;
+        column-count: 2;
+        --webkit-column-gap: 20px;
+        --mox-column-gap: 20px;
+        column-gap: 20px;
+        color: silver;
+        text-align: justify;
+    }
+}
+
+
+/* screen width is less than 1025px but greater than 480px
+        /* 3 columns
+        /* column gaps 30px, background skyblue */
+
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+    .privacyArt {
+        --webkit-column-count: 3;
+        --moz-column-count: 3;
+        column-count: 3;
+        color: skyblue;
+        --webkit-column-gap: 30px;
+        --mox-column-gap: 30px;
+        column-gap: 30px;
+        text-align: justify;
+    }
+}
+
+
+/* screen width is between 700 and 900
+        /* font color purple
+        /* left aligned text */
+
+@media screen and (min-width: 700px) and (max-width: 900px) {
+    .privacyArt {
+        --webkit-column-count: 3;
+        --moz-column-count: 3;
+        column-count: 3;
+        color: purple;
+        text-align: left;
+    }
+}
+
+
+/* screen width is greater than or equal to 1025px
+        /* 4 columns
+        /* column gaps 25px, background skyblue */
+
+@media screen and (min-width: 1025px) {
+    .privacyArt {
+        --webkit-column-count: 4;
+        --moz-column-count: 4;
+        column-count: 4;
+        --webkit-column-gap: 25px;
+        --mox-column-gap: 25px;
+        color: skyblue;
+        text-align: justify;
+    }
+}
+
+
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    position: relative;
+}
+
+
+/* formats table */
+
+#depart {
+    position: relative;
+    left: 25%;
+    border: 1px solid black;
+    width: 50%;
+    text-align: center;
+}
+
+
+/* draws tables lines */
+
+table,
+th,
+td {
+    border: 1px solid black;
+}
+
+
+
+/* small image at left-bottom corner of article */
+
+article {
+    background-image: url(./moon-img.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: bottom left;
+    background-size: 50%;
+}
+
+
+/* formats picture in department table */
+
+td a img {
+    height: 25%;
+    width: 25%;
+    text-align: center;
+}
+
+
+/* formats aside element within article section */
+
+aside {
+    clear: both;
+    background-color: blue;
+    position: absolute;
+    margin: 0;
+    width: 50%;
+    top: 0%;
+    right: 0px;
+    bottom: 72%;
+    float: right;
+    word-wrap: break-word;
+}
+
+
+/* connect aside and section to get proper height*/
+
+#sidebar {
+    position: relative;
+    top: 0px;
+    width: 100%;
+}
+
+
+
+
+#tabletitle {
+    position: relative;
+    text-align: center;
+    left: 8em;
+}
