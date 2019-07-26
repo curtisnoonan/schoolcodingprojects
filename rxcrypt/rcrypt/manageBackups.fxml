@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import com.jfoenix.controls.JFXTimePicker?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane fx:id="anchorid" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rcrypt.manageBackupsController">
+    <children>
+        <BorderPane layoutX="161.0" layoutY="74.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <center>
+                <HBox prefHeight="552.0" prefWidth="326.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <VBox prefHeight="400.0" prefWidth="137.0">
+                            <children>
+                                <Button fx:id="addBackup" mnemonicParsing="false" onAction="#addBackupPushed" prefHeight="81.0" prefWidth="169.0" text="Add Backup" />
+                                <Button fx:id="removeBackup" mnemonicParsing="false" onAction="#removeBackupPushed" prefHeight="90.0" prefWidth="166.0" text="Remove Backup" />
+                                <Button fx:id="editBackup" mnemonicParsing="false" onAction="#editBackupPushed" prefHeight="97.0" prefWidth="173.0" text="Edit Backup" />
+                            </children>
+                        </VBox>
+                        <ScrollPane prefHeight="552.0" prefWidth="204.0">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <ListView fx:id="backupList" prefHeight="451.0" prefWidth="205.0" />
+                           </children></AnchorPane>
+                            </content>
+                        </ScrollPane>
+                    </children>
+                </HBox>
+            </center>
+            <left>
+                <Pane prefHeight="338.0" prefWidth="78.0" BorderPane.alignment="CENTER">
+               <children>
+                  <JFXDrawer fx:id="drawer" defaultDrawerSize="190.0" focusTraversable="true" prefHeight="300.0" prefWidth="78.0" />
+               </children></Pane>
+            </left>
+            <top>
+                <Pane prefHeight="48.0" prefWidth="678.0" BorderPane.alignment="CENTER">
+                    <children>
+                  <AnchorPane prefHeight="20.0" prefWidth="709.0">
+                     <children>
+                        <JFXHamburger fx:id="ham" layoutX="24.0" layoutY="14.0" />
+                              <Label layoutX="289.0" layoutY="6.0" text="Current Backups" />
+                     </children>
+                  </AnchorPane>
+                    </children>
+                </Pane>
+            </top>
+            <right>
+                <AnchorPane prefHeight="552.0" prefWidth="381.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <Label layoutX="14.0" layoutY="34.0" text="Name:" />
+                        <TextField fx:id="backupname" layoutX="62.0" layoutY="29.0" prefHeight="27.0" prefWidth="196.0" />
+                        <CheckBox fx:id="oneTime" layoutX="62.0" layoutY="141.0" mnemonicParsing="false" onAction="#oneTimeChecked" text="One time" />
+                        <CheckBox fx:id="daily" layoutX="62.0" layoutY="191.0" mnemonicParsing="false" onAction="#dailyChecked" text="Daily" />
+                        <CheckBox fx:id="weekly" layoutX="62.0" layoutY="241.0" mnemonicParsing="false" onAction="#weeklyChecked" text="Weekly" />
+                        <CheckBox fx:id="monthly" layoutX="62.0" layoutY="291.0" mnemonicParsing="false" onAction="#monthlyChecked" text="Monthly" />
+                        <JFXDatePicker fx:id="backupCalendar" layoutX="126.0" layoutY="370.0" />
+                        <JFXTimePicker fx:id="backupTime" layoutX="126.0" layoutY="430.0" />
+                        <Button fx:id="applyBackup" layoutX="150.0" layoutY="502.0" mnemonicParsing="false" onAction="#applyButtonPressed" text="Apply" />
+                  <Label layoutX="51.0" layoutY="384.0" prefHeight="17.0" prefWidth="47.0" text="Date:" />
+                  <Label layoutX="52.0" layoutY="436.0" text="Time:" />
+                  <Separator layoutX="3.0" layoutY="468.0" prefHeight="20.0" prefWidth="353.0" />
+                  <Button fx:id="chooseFiles" layoutX="62.0" layoutY="82.0" mnemonicParsing="false" onAction="#chooseFilesButton" text="Choose files:" />
+                  <Button fx:id="chooseFolders" layoutX="226.0" layoutY="82.0" mnemonicParsing="false" onAction="#chooseFoldersButton" text="Choose folders:" />
+                  <ComboBox fx:id="pool" layoutX="71.0" layoutY="330.0" prefWidth="150.0" />
+                  <Label layoutX="18.0" layoutY="335.0" text="Pool:" />
+                    </children>
+                </AnchorPane>
+            </right>
+        </BorderPane>
+    </children>
+</AnchorPane>

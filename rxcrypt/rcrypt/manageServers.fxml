@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<!-- xmlns="http://javafx.com/javafx/9.0.4" -->
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rcrypt.manageServersController">
+    <children>
+        <BorderPane prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <top>
+                <AnchorPane prefHeight="41.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <Label layoutX="251.0" layoutY="12.0" text="Current Servers" />
+                  <JFXHamburger fx:id="ham" layoutX="14.0" layoutY="11.0" />
+                    </children>
+                </AnchorPane>
+            </top>
+            <center>
+                <AnchorPane prefHeight="559.0" prefWidth="420.0" BorderPane.alignment="CENTER">
+                    <children>
+                  <HBox prefHeight="559.0" prefWidth="405.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                              <VBox prefHeight="359.0" prefWidth="106.0">
+                                  <children>
+                                      <Button fx:id="addServer" mnemonicParsing="false" onAction="#addServerPushed" prefHeight="78.0" prefWidth="200.0" text="Add Server" />
+                                      <Button fx:id="removeServer" mnemonicParsing="false" onAction="#removeServer" prefHeight="81.0" prefWidth="204.0" text="Remove Server" />
+                                      <Button fx:id="editServer" mnemonicParsing="false" onAction="#editServer" prefHeight="89.0" prefWidth="200.0" text="Edit Server" />
+                                  </children>
+                              </VBox>
+                        <VBox prefHeight="559.0" prefWidth="313.0">
+                           <children>
+                              <ListView fx:id="serverlist" prefHeight="499.0" prefWidth="313.0" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                    </children>
+                </AnchorPane>
+            </center>
+            <right>
+                <AnchorPane prefHeight="559.0" prefWidth="273.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <TextField fx:id="serverName" layoutX="17.0" layoutY="36.0" />
+                        <Label layoutX="21.0" layoutY="6.0" text="Server Name:" />
+                        <Label layoutX="19.0" layoutY="82.0" text="IP/Host Name:" />
+                        <TextField fx:id="address" layoutX="17.0" layoutY="110.0" />
+                        <Label layoutX="18.0" layoutY="244.0" text="Pool Membership:" />
+                        <Label fx:id="storageSpace" layoutX="18.0" layoutY="412.0" text="Allocated Storage Space (GB):" />
+                        <TextField layoutX="18.0" layoutY="444.0" />
+                        <Button fx:id="apply" layoutX="128.0" layoutY="482.0" mnemonicParsing="false" onAction="#applyButtonPushed" text="Apply" />
+                    <ComboBox fx:id="pool" editable="true" layoutX="18.0" layoutY="282.0" prefWidth="150.0" promptText="New/Existing" />
+                  <Label layoutX="20.0" layoutY="334.0" text="Key Name:" />
+                  <ComboBox fx:id="keyname" layoutX="19.0" layoutY="360.0" prefWidth="150.0" promptText="Select" />
+                  <Label layoutX="17.0" layoutY="155.0" text="Port:" />
+                  <TextField fx:id="port" layoutX="18.0" layoutY="183.0" />
+                    </children>
+                </AnchorPane>
+            </right>
+         <left>
+            <Pane prefHeight="359.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+               <children>
+                  <JFXDrawer fx:id="drawer" defaultDrawerSize="190.0" prefHeight="359.0" prefWidth="100.0" />
+               </children>
+            </Pane>
+         </left>
+        </BorderPane>
+    </children>
+</AnchorPane>

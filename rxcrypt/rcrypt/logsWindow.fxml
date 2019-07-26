@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+
+<!-- xmlns="http://javafx.com/javafx/9.0.4" -->
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rcrypt.logsController">
+   <children>
+      <BorderPane layoutX="82.0" layoutY="29.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <AnchorPane prefHeight="55.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+               <children>
+                  <JFXHamburger fx:id="ham" layoutX="14.0" layoutY="14.0" />
+               </children>
+            </AnchorPane>
+         </top>
+         <left>
+            <Pane prefHeight="545.0" prefWidth="124.0" BorderPane.alignment="CENTER">
+               <children>
+                  <JFXDrawer fx:id="drawer" defaultDrawerSize="190.0" prefHeight="355.0" prefWidth="128.0" />
+               </children>
+            </Pane>
+         </left>
+         <center>
+            <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TextArea fx:id="logsfield" prefHeight="511.0" prefWidth="641.0" />
+               </children>
+            </Pane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<!-- xmlns="http://javafx.com/javafx/9.0.4" -->
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rcrypt.openingPageController">
+    <children>
+        <BorderPane prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <top>
+                <AnchorPane prefHeight="41.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <JFXHamburger fx:id="ham" layoutX="14.0" layoutY="11.0" />
+                    </children>
+                </AnchorPane>
+            </top>
+         <left>
+            <Pane prefHeight="357.0" prefWidth="132.0" BorderPane.alignment="CENTER">
+               <children>
+                  <JFXDrawer fx:id="drawer" defaultDrawerSize="190.0" focusTraversable="true" prefHeight="323.0" prefWidth="134.0" />
+               </children>
+            </Pane>
+         </left>
+        </BorderPane>
+      <AnchorPane layoutX="57.0" prefHeight="600.0" prefWidth="743.0">
+         <children>
+            <Text fill="#1797ff" layoutX="297.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="RCrypt">
+               <font>
+                  <Font size="50.0" />
+               </font>
+            </Text>
+            <Label layoutX="125.0" layoutY="221.0" text="User Name:">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="140.0" layoutY="283.0" text="Password:">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="username" layoutX="247.0" layoutY="224.0" prefHeight="25.0" prefWidth="275.0" />
+            <PasswordField fx:id="password" layoutX="247.0" layoutY="286.0" prefHeight="25.0" prefWidth="275.0" />
+            <Button fx:id="login" layoutX="333.0" layoutY="332.0" mnemonicParsing="false" onAction="#loginButtonPressed" prefHeight="33.0" prefWidth="103.0" text="Login" />
+            <Button fx:id="newaccount" layoutX="336.0" layoutY="382.0" mnemonicParsing="false" onAction="#createUserButtonPressed" text="Create Account" />
+            <Text fx:id="loginconfirmation" layoutX="464.0" layoutY="353.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="139.99999475479126" />
+            <Text fx:id="accountcreation" layoutX="464.0" layoutY="399.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="139.99999475479126" />
+            <Button fx:id="logout" contentDisplay="CENTER" layoutX="514.0" layoutY="35.0" mnemonicParsing="false" onAction="#logoutButtonPressed" />
+            <Text fill="#1797ff" layoutX="168.0" layoutY="579.0" strokeType="OUTSIDE" strokeWidth="0.0" text="File Encryption &amp; Distribution Solutions" textAlignment="CENTER">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+    </children>
+</AnchorPane>

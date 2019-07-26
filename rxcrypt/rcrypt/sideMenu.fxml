@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.VBox?>
+
+<!-- xmlns="http://javafx.com/javafx/9.0.4" -->
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="402.0" prefWidth="148.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rcrypt.sideMenuController">
+<children>
+      <Button fx:id="home" mnemonicParsing="false" onAction="#homePushed" prefHeight="63.0" prefWidth="148.0" text="Home" />
+    <Button fx:id="fileBrowser" mnemonicParsing="false" onAction="#filePushed" prefHeight="103.0" prefWidth="148.0" text="File Browser" />
+    <Button fx:id="manageBackups" mnemonicParsing="false" onAction="#backupsPushed" prefHeight="99.0" prefWidth="148.0" text="Manage Backups" />
+    <Button fx:id="manageServers" mnemonicParsing="false" onAction="#serversPushed" prefHeight="96.0" prefWidth="148.0" text="Manage Servers" />
+    <Button fx:id="settingsButton" mnemonicParsing="false" onAction="#settingsPushed" prefHeight="74.0" prefWidth="148.0" text="Settings" />
+      <Button fx:id="logs" mnemonicParsing="false" onAction="#logsPushed" prefHeight="52.0" prefWidth="148.0" text="Logs" />
+</children>
+</VBox>
