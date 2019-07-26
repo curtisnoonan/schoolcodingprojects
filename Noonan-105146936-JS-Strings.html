@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> JS Practice </title>
+        <style type="text/css">
+        </style>
+    <script type="text/javascript">
+    var result1;
+    var result2;
+    var userInput;
+
+    function start(){
+
+        userInput = window.prompt("Enter a String");
+        var input = userInput;
+
+        result1 = document.getElementById("div1");
+
+        var mychar = '';
+        var length = userInput.length;
+        var myvar = '';
+        
+        for(var count = 0;count <= length;count++){
+            mychar = input.charAt(count);
+            if(isLetter(mychar)){
+                if(mychar.toUpperCase() != mychar){
+                    myvar = mychar.toUpperCase();
+                    input = input.replace(mychar,myvar);
+                }
+                else if(mychar.toLowerCase() != mychar){
+                    myvar = mychar.toLowerCase();
+                    input = input.replace(mychar,myvar);
+                }
+            }
+        }
+        result1.innerHTML += "<p>" + input + "</p>";
+    }
+
+    function isLetter(c) {
+        return c.toLowerCase() != c.toUpperCase();
+    } 
+
+    window.addEventListener("load", start, false);
+    </script>     
+    </head>
+
+    <body>
+        
+        <div id="div1"></div>
+        <div id="div2"></div>
+
+</body>
+</html>
